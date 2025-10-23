@@ -4,11 +4,11 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 function ContactMe() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen px-6 sm:px-10 bg-gradient-to-br from-[#1e0e2b] via-[#261a39] to-[#36244d] text-white overflow-hidden">
+    <section className="relative flex flex-col min-h-screen px-6 sm:px-10 bg-gradient-to-br from-[#1e0e2b] via-[#261a39] to-[#36244d] text-white overflow-hidden">
 
       {/* Radial glow background */}
       <div className="inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.2)_0%,transparent_70%)]" />
-      <h1 className="text-center mt-8 text-4xl sm:text-5xl font-bold mb-4 bg-[linear-gradient(45deg,_#ff00b4,_#6a00ff)] bg-clip-text text-transparent w-full">
+      <h1 className="text-center mt-8 text-4xl sm:text-5xl font-bold mb-2 bg-[linear-gradient(45deg,_#ff00b4,_#6a00ff)] bg-clip-text text-transparent w-full p-2">
         Get in Touch
       </h1>
       <p className="text-center text-gray-300 mb-10">
