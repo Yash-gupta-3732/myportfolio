@@ -7,7 +7,7 @@ const navigation = [
   { name: 'About Me', to: '/about', current: false },
   { name: 'Contact Me', to: '/contact', current: false },
   { name: 'Projects', to: '/project', current: false },
-  { name: 'Blog', to: '/blog', current: false },
+  { name: 'Skills', to: '/skill', current: false },
 ]
 
 function classNames(...classes) {
