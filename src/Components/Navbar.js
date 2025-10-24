@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, useLocation } from 'react-router-dom'
-
+import portfolioimage from "../Assets/portfolioimage.png";
 const navigation = [
   { name: 'Home', to: '/', current: true },
   { name: 'About Me', to: '/about', current: false },
@@ -43,8 +43,8 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    className="h-8 w-auto rounded-full"
+                    src={portfolioimage}
                     alt="Your Company"
                   />
                 </div>
