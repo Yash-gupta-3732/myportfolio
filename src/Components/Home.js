@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import portfolioimage from "../Assets/portfolioimage.png";
+import resume from "../Assets/resume.pdf";
 import "../App.css";
 
 function Home() {
@@ -57,7 +58,8 @@ function Home() {
           </p>
 
           <motion.a
-            href="#"
+            href={resume}
+            download="Yash_Gupta_Resume.pdf"
             whileHover={{
               scale: 1.05,
               backgroundColor: "#6a00ff",
