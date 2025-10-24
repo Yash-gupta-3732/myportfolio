@@ -50,13 +50,14 @@ function AboutMe() {
   ];
 
   return (
-    <div className="relative overflow-hidden min-h-screen flex flex-col text-white">
+    <section className="relative overflow-hidden min-h-screen flex flex-col text-white">
       {/* 🔮 Animated Gradient Background */}
       <div className="absolute inset-0 animate-gradient bg-[linear-gradient(120deg,_#001933,_#280046,_#002342,_#003366)] bg-[length:400%_400%]"></div>
 
       {/* 🌫️ Glassmorphic Sections */}
       <div className="relative z-10 py-16 px-6 flex justify-center">
         <div className="max-w-5xl w-full space-y-12">
+          {/* Animated Entry */}
           {sections.map((section, index) => (
             <motion.div
               key={index}
@@ -64,9 +65,8 @@ function AboutMe() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`flex flex-col md:flex-row ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } items-center gap-6 md:gap-10`}
+              className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                } items-center gap-6 md:gap-10`}
             >
               {/* Glass Card */}
               <motion.div
@@ -74,7 +74,7 @@ function AboutMe() {
                   scale: 1.03,
                   boxShadow: "0 0 20px rgba(139, 92, 246, 0.4)",
                 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className="flex flex-col items-center md:items-start 
                 bg-[rgba(255,255,255,0.08)] backdrop-blur-lg border border-white/20 
                 rounded-2xl p-6 md:p-8 shadow-lg w-full md:w-1/2"
@@ -90,21 +90,20 @@ function AboutMe() {
                 </p>
               </motion.div>
 
-              {/* Optional subtle gradient accent */}
+              {/*subtle gradient accent */}
               <div className="hidden md:block w-1/2">
                 <div
-                  className={`h-1 w-2/3 ${
-                    index % 2 === 0
+                  className={`h-1 w-2/3 ${index % 2 === 0
                       ? "bg-gradient-to-r from-purple-400/40 to-transparent"
                       : "bg-gradient-to-l from-purple-400/40 to-transparent"
-                  } rounded-full mx-auto`}
+                    } rounded-full mx-auto`}
                 ></div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -49,7 +49,7 @@ function Projects() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 hover:scale-[1.03] transition-all duration-300 shadow-xl hover:shadow-purple-500/30"
+            className="w-full max-w-sm rounded-2xl bg-black/10 backdrop-blur-lg border border-white/20 p-5 hover:scale-[1.03] transition-all duration-300 shadow-xl hover:shadow-purple-500/30"
           >
             {/* Image */}
             <div className="w-full h-48 rounded-lg overflow-hidden mb-4 border border-white/10">
