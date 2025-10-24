@@ -1,8 +1,35 @@
-import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 
 function ContactMe() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    toast.loading("Sending message...");
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.dismiss();
+          toast.success("Message sent successfully 🚀");
+          e.target.reset();
+        },
+        (error) => {
+          toast.dismiss();
+          toast.error("Failed to send message ❌");
+          console.error("EmailJS error:", error);
+        }
+      );
+  };
+
   return (
     <section className="relative flex flex-col min-h-screen px-6 sm:px-10 bg-gradient-to-br from-[#1e0e2b] via-[#261a39] to-[#36244d] text-white overflow-hidden">
 
@@ -45,11 +72,12 @@ function ContactMe() {
           </h2>
 
           {/* Contact Form */}
-          <form className="flex flex-col gap-5 ">
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5 ">
             <div className="relative">
               <input
                 type="text"
                 id="name"
+                name='from_name'
                 required
                 className="w-full px-4 pt-5 pb-2 text-white bg-black/10 border border-white/20 rounded-md focus:border-purple-400 focus:outline-none peer"
               />
@@ -65,6 +93,7 @@ function ContactMe() {
               <input
                 type="email"
                 id="email"
+                name='from_email'
                 required
                 className="w-full px-4 pt-5 pb-2 text-white bg-black/10 border border-white/20 rounded-md focus:border-purple-400 focus:outline-none peer"
               />
@@ -79,6 +108,7 @@ function ContactMe() {
             <div className="relative">
               <textarea
                 id="message"
+                name='message'
                 rows="4"
                 required
                 className="w-full px-4 pt-5 pb-2 text-white bg-black/10 border border-white/20 rounded-md focus:border-purple-400 focus:outline-none peer resize-none"
@@ -90,7 +120,11 @@ function ContactMe() {
                 Message
               </label>
             </div>
-
+            <input
+              type="hidden"
+              name="subject"
+              value="New message from portfolio by {{from_name}}"
+            />
             <button
               type="submit"
               className="mt-4 px-6 py-3 bg-[linear-gradient(45deg,_#ff00b4,_#6a00ff)] rounded-md font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
