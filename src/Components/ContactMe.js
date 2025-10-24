@@ -120,11 +120,6 @@ function ContactMe() {
                 Message
               </label>
             </div>
-            <input
-              type="hidden"
-              name="subject"
-              value="New message from portfolio by {{from_name}}"
-            />
             <button
               type="submit"
               className="mt-4 px-6 py-3 bg-[linear-gradient(45deg,_#ff00b4,_#6a00ff)] rounded-md font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
