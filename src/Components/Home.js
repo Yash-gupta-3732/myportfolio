@@ -37,7 +37,7 @@ function Home() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center min-[960px]:text-left min-[960px]:w-[50%] bg-white/10 backdrop-blur-md border-2 border-purple-500 rounded-2xl shadow-lg p-6"
+          className="text-left min-[960px]:w-[50%] bg-white/10 backdrop-blur-md border-2 border-purple-500 rounded-2xl shadow-lg p-6"
         >
           <h1 className="text-4xl sm:text-4xl font-bold leading-tight mb-4">
             Hi There 👋 <br />
@@ -46,7 +46,7 @@ function Home() {
               Yash Gupta
             </span>
           </h1>
-          <p className="text-base sm:text-lg text-gray-200 mb-6 leading-relaxed">
+          <p className="sm:text-lg text-gray-200 mb-6 leading-relaxed">
             A curious mind and a <span className="text-purple-400">MERN Stack Developer</span> who loves building digital experiences that
             blend design, logic, and purpose.
             From crafting sleek React interfaces to designing robust Node.js & Express backends,
