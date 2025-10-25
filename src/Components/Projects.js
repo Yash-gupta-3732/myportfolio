@@ -15,39 +15,39 @@ function Projects() {
       techStack: ["React", "Tailwind CSS", "Framer Motion"],
       imageUrl: portfolioweb,
       projectLink: null,
-      githubLink: "#",
+      githubLink: "https://github.com/Yash-gupta-3732/myportfolio-frontend",
     },
     {
       title: "Weather App",
-      description: "A real-time weather app that fetches hyperlocal data using Tomorrow.io API, with air quality and UV insights integrated on an animated interface.",
+      description: "A real-time weather app powered by the OpenWeatherMap API with a sleek, animated interface. featuring the Smart Weather Tracker that delivers live AQI, UV, and severe weather alerts through notification.",
       techStack: ["React Native", "API Integration"],
       imageUrl: cloud,
-      projectLink: null,
+      projectLink: "https://github.com/Yash-gupta-3732/react-native-weather-app/releases/download/v1.0.0/app-release.apk",
       githubLink: "https://github.com/Yash-gupta-3732/react-native-weather-app",
     },
     {
       title: "i-notebook",
-      description: "A secure note-taking app with user authentication, allowing users to create, edit, and delete notes seamlessly with a clean UI.",
-      techStack: ["MongoDB", "Express", "React", "Node.js"],
+      description: "A secure note-taking app with user authentication, allowing users to create, edit, delete and share notes seamlessly with a clean UI.",
+      techStack: ["MongoDB", "Express", "React", "Node.js","Context Api"],
       imageUrl: notebook,
       projectLink: "https://inotebook-frontend-one.vercel.app/#/login",
       githubLink: "https://github.com/Yash-gupta-3732/inotebook",
     },
     {
       title: "Spotify Clone",
-      description: "A Spotify music player clone built with React, featuring user authentication, music playback, and a sleek UI for an immersive experience.", 
-      techStack: ["React", "Spotify API", "Context API"],
+      description: "A Spotify music player clone built with Html ,Css and Javascript. with music playback, and a responsive sleek UI for an immersive experience.", 
+      techStack: ["HTML", "CSS", "JavaScript","fetch API"],
       imageUrl: spotify,
-      projectLink: "",
-      githubLink:""
+      projectLink: "https://www.linkedin.com/posts/yash-gupta-004499256_webdevelopment-spotifyclone-responsivewebsite-activity-7199293078350831618-qPOu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8TZcQB7oqdDfl0-_Wn-W0MxdupauJs6SU",
+      githubLink:"https://github.com/Yash-gupta-3732/spotify-clone"
     },
     {
-      title: "University Placement Cell",
+      title: "Placement Portal Website",
       description: "A comprehensive placement management system for universities, streamlining student registrations, company listings, and placement statistics.", 
-      techStack: ["Django", "Bootstrap", "SQLite"],
+      techStack: ["PHP", "JS", "HTML", "CSS","MySQL"],
       imageUrl: placementcell,
-      projectLink: "",
-      githubLink: ""
+      projectLink: "https://yourplacementportal.rf.gd/?i=1",
+      githubLink: "https://github.com/Yash-gupta-3732/placement_portal_website"
     },
 
   ];
