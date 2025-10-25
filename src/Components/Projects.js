@@ -1,5 +1,9 @@
-import React from 'react'
-import portfolioimage from "../Assets/portfolioimage.png";
+import React from 'react';
+import notebook from "../Assets/NOTEBOOK.webp";
+import cloud from "../Assets/cloudy-weather.webp";
+import portfolioweb from "../Assets/Professional-portfolio.webp";
+import spotify from "../Assets/spotify.webp";
+import placementcell from "../Assets/University-Placement-Cell.webp";
 import { SiGithub } from "react-icons/si";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
@@ -9,15 +13,15 @@ function Projects() {
       title: "Portfolio Website",
       description: "A personal portfolio built with React and Tailwind CSS, showcasing my work, projects, and experience with smooth animations and a glassmorphic design.",
       techStack: ["React", "Tailwind CSS", "Framer Motion"],
-      imageUrl: portfolioimage,
-      projectLink: "#",
+      imageUrl: portfolioweb,
+      projectLink: null,
       githubLink: "#",
     },
     {
       title: "Weather App",
       description: "A real-time weather app that fetches hyperlocal data using Tomorrow.io API, with air quality and UV insights integrated on an animated interface.",
       techStack: ["React Native", "API Integration"],
-      imageUrl: portfolioimage,
+      imageUrl: cloud,
       projectLink: null,
       githubLink: "https://github.com/Yash-gupta-3732/react-native-weather-app",
     },
@@ -25,10 +29,27 @@ function Projects() {
       title: "i-notebook",
       description: "A secure note-taking app with user authentication, allowing users to create, edit, and delete notes seamlessly with a clean UI.",
       techStack: ["MongoDB", "Express", "React", "Node.js"],
-      imageUrl: portfolioimage,
+      imageUrl: notebook,
       projectLink: "https://inotebook-frontend-one.vercel.app/#/login",
       githubLink: "https://github.com/Yash-gupta-3732/inotebook",
     },
+    {
+      title: "Spotify Clone",
+      description: "A Spotify music player clone built with React, featuring user authentication, music playback, and a sleek UI for an immersive experience.", 
+      techStack: ["React", "Spotify API", "Context API"],
+      imageUrl: spotify,
+      projectLink: "",
+      githubLink:""
+    },
+    {
+      title: "University Placement Cell",
+      description: "A comprehensive placement management system for universities, streamlining student registrations, company listings, and placement statistics.", 
+      techStack: ["Django", "Bootstrap", "SQLite"],
+      imageUrl: placementcell,
+      projectLink: "",
+      githubLink: ""
+    },
+
   ];
 
   return (
