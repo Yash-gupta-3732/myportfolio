@@ -50,10 +50,8 @@ function AboutMe() {
   ];
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex flex-col text-white">
-      {/* 🔮 Animated Gradient Background */}
-      <div className="absolute inset-0 animate-gradient bg-[linear-gradient(120deg,_#001933,_#280046,_#002342,_#003366)] bg-[length:400%_400%]"></div>
-
+    <section className="relative overflow-hidden min-h-screen flex flex-col text-white bg-gradient-to-br from-[#1e0e2b] via-[#261a39] to-[#36244d]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.2)_0%,transparent_70%)]" />
       {/* 🌫️ Glassmorphic Sections */}
       <div className="relative z-10 py-16 px-6 flex justify-center">
         <div className="max-w-5xl w-full space-y-12">
@@ -76,7 +74,7 @@ function AboutMe() {
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="flex flex-col items-center md:items-start 
-                bg-[rgba(255,255,255,0.08)] backdrop-blur-lg border border-white/20 
+            bg-black/10 backdrop-blur-lg border border-white/20 
                 rounded-2xl p-6 md:p-8 shadow-lg w-full md:w-1/2"
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -94,8 +92,8 @@ function AboutMe() {
               <div className="hidden md:block w-1/2">
                 <div
                   className={`h-1 w-2/3 ${index % 2 === 0
-                      ? "bg-gradient-to-r from-purple-400/40 to-transparent"
-                      : "bg-gradient-to-l from-purple-400/40 to-transparent"
+                    ? "bg-gradient-to-r from-purple-400/40 to-transparent"
+                    : "bg-gradient-to-l from-purple-400/40 to-transparent"
                     } rounded-full mx-auto`}
                 ></div>
               </div>
