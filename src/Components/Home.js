@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import portfolioimage from "../Assets/portfolioimage.png";
 import resume from "../Assets/resume.pdf";
 import "../App.css";
-import {Link} from "react-router-dom";
-import { HiOutlineMail } from "react-icons/hi"; 
+import { Link } from "react-router-dom";
+import { HiOutlineMail } from "react-icons/hi";
 import { LuDownload } from "react-icons/lu";
 
 
@@ -63,25 +63,29 @@ function Home() {
             Always learning, always creating — one line of code at a time. 🚀
           </p>
 
-          <motion.a
-            href={resume}
-            download="Yash_Gupta_Resume.pdf"
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "#6a00ff",
-              boxShadow: "0 0 20px rgba(106, 0, 255, 0.5)",
-            }}
-            transition={{ duration: 0.3 }}
-            className="inline-block px-6 py-3 bg-[#212143] text-white rounded-lg shadow-md font-semibold tracking-wide"
-          >
-            Download Resume <LuDownload className="inline mb-1 ml-1 size-5" />
-          </motion.a>
-          <Link
-            to="/contact"
-            className="inline-block mx-6 px-6 py-3 bg-[#0064ff] text-white rounded-lg shadow-md font-semibold tracking-wide hover:scale-105 transition-transform duration-300"
-          >
-            Contact <HiOutlineMail className="inline mb-1 ml- size-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4">
+            <motion.a
+              href={resume}
+              download="Yash_Gupta_Resume.pdf"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "#6a00ff",
+                boxShadow: "0 0 20px rgba(106, 0, 255, 0.5)",
+              }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-[#212143] text-white rounded-lg shadow-md font-semibold tracking-wide w-full sm:w-auto"
+            >
+              Download Resume <LuDownload className="size-5" />
+            </motion.a>
+
+            <Link
+              to="/contact"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-[#0064ff] text-white rounded-lg shadow-md font-semibold tracking-wide hover:scale-105 transition-transform duration-300 w-full sm:w-auto"
+            >
+              Contact <HiOutlineMail className="size-5" />
+            </Link>
+          </div>
+
         </motion.div>
       </motion.div>
     </div>
