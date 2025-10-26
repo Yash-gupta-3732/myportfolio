@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import portfolioimage from "../Assets/portfolioimage.png";
 import resume from "../Assets/resume.pdf";
 import "../App.css";
+import {Link} from "react-router-dom";
+import { HiOutlineMail } from "react-icons/hi"; 
+import { LuDownload } from "react-icons/lu";
+
+
+
 
 function Home() {
   return (
@@ -68,8 +74,14 @@ function Home() {
             transition={{ duration: 0.3 }}
             className="inline-block px-6 py-3 bg-[#212143] text-white rounded-lg shadow-md font-semibold tracking-wide"
           >
-            Download Resume
+            Download Resume <LuDownload className="inline mb-1 ml-1 size-5" />
           </motion.a>
+          <Link
+            to="/contact"
+            className="inline-block mx-6 px-6 py-3 bg-[#0064ff] text-white rounded-lg shadow-md font-semibold tracking-wide hover:scale-105 transition-transform duration-300"
+          >
+            Contact <HiOutlineMail className="inline mb-1 ml- size-5" />
+          </Link>
         </motion.div>
       </motion.div>
     </div>
