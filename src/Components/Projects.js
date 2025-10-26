@@ -6,6 +6,7 @@ import spotify from "../Assets/spotify.webp";
 import placementcell from "../Assets/University-Placement-Cell.webp";
 import { SiGithub } from "react-icons/si";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 function Projects() {
   const cards = [
@@ -66,10 +67,18 @@ function Projects() {
       </p>
 
       {/* Cards Grid */}
+      
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center pb-16">
         {cards.map((card, index) => (
+           <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`flex flex-col md:flex-row items-center gap-6 md:gap-10`}
+                      >
           <div
-            key={index}
             className="w-full max-w-sm rounded-2xl bg-black/10 backdrop-blur-lg border border-white/20 p-5 hover:scale-[1.03] transition-all duration-300 shadow-xl hover:shadow-purple-500/30"
           >
             {/* Image */}
@@ -117,6 +126,7 @@ function Projects() {
               </a>
             </div>
           </div>
+          </motion.div>
         ))}
       </div>
     </section>
