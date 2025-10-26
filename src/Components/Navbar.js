@@ -22,7 +22,7 @@ export default function Navbar() {
   });
 
   return (
-    <Disclosure as="nav" className="bg-[#002342]">
+    <Disclosure as="nav" className="bg-black/20 backdrop-blur-lg border-white/10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
