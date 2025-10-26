@@ -52,7 +52,7 @@ function AboutMe() {
   return (
     <section className="relative overflow-hidden min-h-screen flex flex-col text-white bg-gradient-to-br from-[#1e0e2b] via-[#261a39] to-[#36244d]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.2)_0%,transparent_70%)]" />
-      {/* 🌫️ Glassmorphic Sections */}
+ 
       <div className="relative z-10 py-16 px-6 flex justify-center">
         <div className="max-w-5xl w-full space-y-12">
           {/* Animated Entry */}
