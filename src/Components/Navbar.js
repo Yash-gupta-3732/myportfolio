@@ -5,9 +5,9 @@ import portfolioimage from "../Assets/portfolioimage.png";
 const navigation = [
   { name: 'Home', to: '/', current: true },
   { name: 'About Me', to: '/about', current: false },
-  { name: 'Contact Me', to: '/contact', current: false },
-  { name: 'Projects', to: '/project', current: false },
   { name: 'Skills', to: '/skill', current: false },
+  { name: 'Projects', to: '/project', current: false },
+  { name: 'Contact Me', to: '/contact', current: false },
 ]
 
 function classNames(...classes) {
