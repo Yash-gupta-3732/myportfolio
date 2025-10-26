@@ -3,6 +3,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
+import { FiSend } from "react-icons/fi"; 
 
 function ContactMe() {
   const form = useRef();
@@ -124,7 +125,7 @@ function ContactMe() {
               type="submit"
               className="mt-4 px-6 py-3 bg-[linear-gradient(45deg,_#ff00b4,_#6a00ff)] rounded-md font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
-              Send Message
+              Send Message <FiSend className="inline size-5" />
             </button>
           </form>
         </div>
